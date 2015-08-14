@@ -1,4 +1,4 @@
-function scoreMatrix = getScoreMatrixFromVotes (votes, nVotes)
+function scoreMatrix = getScoreMatrixFromVotes (votes)%, nVotes)
 
     scoreMatrix = cell(6,8);
     for r = 1:6
@@ -8,7 +8,8 @@ function scoreMatrix = getScoreMatrixFromVotes (votes, nVotes)
     end
 
     %workersList = loadjson('workers.json');
-    sampledVotes = datasample(votes, nVotes, 'Replace', false);
+    %sampledVotes = datasample(votes, nVotes, 'Replace', false);
+    sampledVotes = votes;
     for i = 1 : size(sampledVotes, 1)
         image1 = sampledVotes(i,1);
         image2 = sampledVotes(i,2);

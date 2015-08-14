@@ -20,6 +20,8 @@ function ratingMatrix = getRatingMatrixFromScoreMatrix (scoreMatrix)
         end
     end
     
+    ratingMatrix(1) = [];
+    
 end
 
 %     hexW = 100;
